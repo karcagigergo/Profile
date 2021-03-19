@@ -84,10 +84,15 @@ ul {
 }
 
 .btn-blue {
-    background-color: #e10b26;
+    background-color: #35b33b;
     color: white;
     padding: 15px 20px;
     border-radius: 4px;
+    transition: 0.5s;
+}
+
+.btn-blue:hover {
+    background-color: #e00d29e0;
 }
 
 #introduction p {
