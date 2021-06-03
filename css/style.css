@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+@import url('components/container.css');
+@import url('components/social.css');
+@import url('components/footer.css');
+@import url('components/gitcorner.css');
+@import url('components/buttons.css');
+
 
 @media (max-width: 960px) {
     /* For a screen < 960px, this CSS will be read */
@@ -24,6 +30,16 @@ body {
     color: #000000;
     font-family: 'Raleway', sans-serif;
     line-height: 24px;
+    margin: 0;
+    --color-text: #111;
+    --color-number: #999;
+    --color-bg: #fff;
+    --color-link: #1352d1;
+    --color-link-hover: #111;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -42,22 +58,41 @@ p {
 }
 
 a {
-    text-decoration: none;
-    color: #2468ae;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	outline: none;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus,
+button:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid #443ffc;
+	outline-offset: 3px;
+}
+
+a:focus-visible {
+	background: none;
 }
 
 ul {
     list-style-type: none;
 }
-.container {
-    width: 700px;
-    margin: 40px auto;
-}
+
 .yellow-card {
-    background-color:#FFC017;
-    box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    background-color: white;
     padding: 45px;
     margin: 20px 0px;
     text-align: center;
@@ -84,15 +119,15 @@ ul {
 }
 
 .btn-blue {
-    background-color: #e00d29e0;
+    background-color: #e10b26;
     color: white;
     padding: 15px 20px;
     border-radius: 4px;
-    transition: 0.5s;
 }
 
 .btn-blue:hover {
-    background-color: #35b33b;
+  background-color: #35b33b;
+  color: white;
 }
 
 #introduction p {
@@ -102,6 +137,3 @@ ul {
 .black-border {
     border: 1px solid black;
 }
-
-
-
